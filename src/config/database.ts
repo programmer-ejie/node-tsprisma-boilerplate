@@ -1,7 +1,9 @@
 import { PrismaClient } from '@prisma/client';
+import { PrismaPg } from '@prisma/adapter-pg';
 import env from '../utils/validate-env';
 
-const prisma = new PrismaClient();
+const adapter = new PrismaPg(env.DATABASE_URL);
+const prisma = new PrismaClient({ adapter });
 
 export const query = async (text: string, params?: any[]) => {
     const start = Date.now();
