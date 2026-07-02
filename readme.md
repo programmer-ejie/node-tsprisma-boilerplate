@@ -1,5 +1,10 @@
 # 🚀 Node-TS-Boilerplate
 
+run this command
+1. npm install
+2. npx prisma generate
+3. npx prisma migrate dev
+
 A production-ready **Node.js + TypeScript** backend boilerplate with environment validation, error handling, and auto-reload development.
 
 ## ✨ Features
