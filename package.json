@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
-    "build": "tsc"
+    "build": "tsc",
+    "kill-port": "for /f \"tokens=5\" %a in ('netstat -ano ^| findstr :5001') do taskkill /PID %a /F 2>nul"
   },
   "keywords": [],
   "author": "",
